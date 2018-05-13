@@ -1,0 +1,17 @@
+{
+  "name": "NCTU_softwaretesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha || exit 0",
+    "cov": "nyc mocha || exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3"
+  }
+}
