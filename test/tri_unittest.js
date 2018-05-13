@@ -47,4 +47,3 @@ describe('Triangle test',()=>{
 })
 
 
-tri(1,2,3)
