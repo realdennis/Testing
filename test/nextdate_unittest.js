@@ -41,9 +41,21 @@ describe('Next Date test',()=>{
             equal(nd(2004,1,29),'2004/1/30');
         });
         it('c2',()=>{
-            equal(nd())
+            equal(nd(1900,2,28),'1900/2/29');
+            equal(nd(2000,2,29),'2000/3/1');
+            equal(nd(2000,5,31),'2000/6/1');
+            equal(nd(2000,6,30),'2000/7/1');
+            equal(nd(2000,8,31),'2000/9/1');
+            equal(nd(2000,9,30),'2000/10/1');
+            equal(nd(2000,8,25),'2000/8/26');
         });
         it('MCDC',()=>{
+            //Date out of range
+            equal(nd(1900,8,0),'Out of range value');
+            equal(nd(1900,6,31),'Invalid date');
+            equal(nd(2001,2,29),'Invalid date');
+            equal(nd(1900,2,30),'Invalid date');
+
         })
     })
 })
