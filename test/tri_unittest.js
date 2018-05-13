@@ -3,7 +3,7 @@ var equal = assert.equal;
 
 var tri = require('../Triangle/tri');
 describe('Triangle test',()=>{
-    describe('Code Coverage',()=>{
+    describe('Path Testing',()=>{
         it('c0',()=>{
             equal(tri(5,5,5),'Equilateral');
         })
