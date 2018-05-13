@@ -3,6 +3,7 @@ var equal = assert.equal;
 
 var com = require('../Commission/Commission');
 describe('Next Date test',()=>{
+    /* homework 1
     describe('Boundary Value',()=>{
         it('Weak normal',()=>{
             equal(com(1,1,1),10);
@@ -15,6 +16,7 @@ describe('Next Date test',()=>{
             equal(com(48,48,0),'Out of range value');
         })
     }),
+    */
     describe('Path Testing',()=>{
         it('c0',()=>{
             equal(com(-1,20,20),'Out of range value');
@@ -41,6 +43,9 @@ describe('Next Date test',()=>{
             equal(com(20,20,20),260.0);
         });
         it('c2',()=>{
+
+            //Commission Problem without loop, actually no c2 test
+            
             //terminated
             equal(com(-1,20,20),'Out of range value');
             //invalid
@@ -57,7 +62,9 @@ describe('Next Date test',()=>{
             equal(com(20,20,20),260.0);
 
         });
-        it('MCDC',()=>{            
+        it('MCDC',()=>{  
+            //According to Flow Chart, we dont have Multi-Condition
+
             //terminated
             equal(com(-1,20,20),'Out of range value');
             //invalid
