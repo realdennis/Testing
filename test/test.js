@@ -1,7 +1,7 @@
 var assert = require('assert');
 var equal = assert.equal;
 
-var tri = require('../tri');
+var tri = require('../tri/tri');
 describe('Triangle test',()=>{
     describe('Code Coverage',()=>{
         it('c0',()=>{
@@ -12,10 +12,15 @@ describe('Triangle test',()=>{
             equal(tri(-1,-1,-1),'Not a triangle');
             equal(tri(5,5,10),'Not a triangle');
         });
-        it('c1',()=>{
+        it('c2',()=>{
             equal(tri(5,5,5),'Equilateral');
             equal(tri(-1-1-1),'Not a triangle');
             equal(tri(5,5,10),'Not a triangle');
+        });
+        it('MCDC',()=>{
+            equal(tri(3,3,5),'Isosceles');
+            equal(tri(3,5,3),'Isosceles');
+            equal(tri(5,3,3),'Isosceles');
         })
     })
 })
