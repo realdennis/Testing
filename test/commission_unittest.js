@@ -17,6 +17,14 @@ describe('Next Date test',()=>{
     }),
     describe('Path Testing',()=>{
         it('c0',()=>{
+            equal(com(-1,20,20),'Out of range value');
+            equal(com(0,20,20),'Out of range value');
+            equal(com(71,20,20),'Out of range value');
+            equal(com(20,0,20),'Out of range value');
+            equal(com(20,20,91),'Out of range value');
+            equal(com(1,1,1),10.0);
+            equal(com(1,20,20),121.75);
+            equal(com(20,20,20),260.0);
         })
         it('c1',()=>{
         });
