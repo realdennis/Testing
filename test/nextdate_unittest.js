@@ -7,7 +7,7 @@ describe('Next Date test',()=>{
         it('Weak normal',()=>{
             equal(nd(1900,6,15),'1900/6/16');
             equal(nd(1901,6,15),'1901/6/16');
-            equal(nd(1962,6,15),'1962/6/15');
+            equal(nd(1962,6,15),'1962/6/16');
         });
         it('Strong normal',()=>{
             equal(nd(1900,6,15),'1900/6/16');
@@ -15,7 +15,7 @@ describe('Next Date test',()=>{
             equal(nd(1962,6,1),'1962/6/2');
         });
         it('Weak robust',()=>{
-            equal(nd(1899,6,15),'1899/6/16');
+            equal(nd(1899,6,15),'Out of range value');
             equal(nd(1900,6,15),'1900/6/16');
             equal(nd(1901,6,15),'1901/6/16');
         })
