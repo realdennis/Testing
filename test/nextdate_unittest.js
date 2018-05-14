@@ -1,7 +1,7 @@
 var assert = require('assert');
 var equal = assert.equal;
 
-var nd = require('../nextDate/nextDate');
+var nd = require('../NextDate/nextDate');
 describe('Next Date test',()=>{
     /* Home work 1
     describe('Boundary Value',()=>{
