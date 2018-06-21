@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha || exit 0",
-    "cov": "nyc mocha || exit 0"
+    "cov": "nyc mocha || exit 0",
+    "before": "nyc report --reporter=text-lcov > coverage.lcov",
+    "after": "codecov --token=0774df73-0172-421c-9504-531ce8e351d3"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "codecov": "^3.0.2",
     "mocha": "^5.1.1",
     "nyc": "^12.0.2"
   }
