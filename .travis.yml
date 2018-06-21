@@ -1,6 +1,12 @@
 language: node_js
 node_js:
   - 10.0
+
+before_install:
+  - sudo pip install codecov
 script:
   - npm run test
   - npm run cov
+
+after_success:
+  - codecov -X nyc
